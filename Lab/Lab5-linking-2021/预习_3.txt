@@ -1,0 +1,149 @@
+env	0x7fffa503d430	140735961879600
+env[0]	*env	0x7fffa503f302	140735961887490
+SHELL=/bin/bash
+env[1]	*env	0x7fffa503f312	140735961887506
+SESSION_MANAGER=local/ubuntu:@/tmp/.ICE-unix/1941,unix/ubuntu:/tmp/.ICE-unix/1941
+env[2]	*env	0x7fffa503f364	140735961887588
+QT_ACCESSIBILITY=1
+env[3]	*env	0x7fffa503f377	140735961887607
+COLORTERM=truecolor
+env[4]	*env	0x7fffa503f38b	140735961887627
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+env[5]	*env	0x7fffa503f3b8	140735961887672
+XDG_MENU_PREFIX=gnome-
+env[6]	*env	0x7fffa503f3cf	140735961887695
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+env[7]	*env	0x7fffa503f3fb	140735961887739
+LANGUAGE=en_US:en
+env[8]	*env	0x7fffa503f40d	140735961887757
+LC_ADDRESS=zh_CN.UTF-8
+env[9]	*env	0x7fffa503f424	140735961887780
+GNOME_SHELL_SESSION_MODE=ubuntu
+env[10]	*env	0x7fffa503f444	140735961887812
+LC_NAME=zh_CN.UTF-8
+env[11]	*env	0x7fffa503f458	140735961887832
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+env[12]	*env	0x7fffa503f481	140735961887873
+XMODIFIERS=@im=ibus
+env[13]	*env	0x7fffa503f495	140735961887893
+DESKTOP_SESSION=ubuntu
+env[14]	*env	0x7fffa503f4ac	140735961887916
+LC_MONETARY=zh_CN.UTF-8
+env[15]	*env	0x7fffa503f4c4	140735961887940
+SSH_AGENT_PID=1907
+env[16]	*env	0x7fffa503f4d7	140735961887959
+GTK_MODULES=gail:atk-bridge
+env[17]	*env	0x7fffa503f4f3	140735961887987
+DBUS_STARTER_BUS_TYPE=session
+env[18]	*env	0x7fffa503f511	140735961888017
+PWD=/mnt/hgfs/CSAPP/Lab/Lab05-linking-2021
+env[19]	*env	0x7fffa503f53c	140735961888060
+LOGNAME=lyy
+env[20]	*env	0x7fffa503f548	140735961888072
+XDG_SESSION_DESKTOP=ubuntu
+env[21]	*env	0x7fffa503f563	140735961888099
+XDG_SESSION_TYPE=x11
+env[22]	*env	0x7fffa503f578	140735961888120
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+env[23]	*env	0x7fffa503f5ac	140735961888172
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+env[24]	*env	0x7fffa503f5d5	140735961888213
+WINDOWPATH=2
+env[25]	*env	0x7fffa503f5e2	140735961888226
+HOME=/home/lyy
+env[26]	*env	0x7fffa503f5f1	140735961888241
+USERNAME=lyy
+env[27]	*env	0x7fffa503f5fe	140735961888254
+IM_CONFIG_PHASE=1
+env[28]	*env	0x7fffa503f610	140735961888272
+LC_PAPER=zh_CN.UTF-8
+env[29]	*env	0x7fffa503f625	140735961888293
+LANG=en_US.UTF-8
+env[30]	*env	0x7fffa503f636	140735961888310
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+env[31]	*env	0x7fffa503fc18	140735961889816
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+env[32]	*env	0x7fffa503fc39	140735961889849
+VTE_VERSION=6003
+env[33]	*env	0x7fffa503fc4a	140735961889866
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/081cd264_5b2e_4ca5_b96a_e0e65c376bcd
+env[34]	*env	0x7fffa503fca0	140735961889952
+INVOCATION_ID=985fd6a32d9644eab0ac58b5b0825588
+env[35]	*env	0x7fffa503fccf	140735961889999
+MANAGERPID=1185
+env[36]	*env	0x7fffa503fcdf	140735961890015
+LESSCLOSE=/usr/bin/lesspipe %s %s
+env[37]	*env	0x7fffa503fd01	140735961890049
+XDG_SESSION_CLASS=user
+env[38]	*env	0x7fffa503fd18	140735961890072
+TERM=xterm-256color
+env[39]	*env	0x7fffa503fd2c	140735961890092
+LC_IDENTIFICATION=zh_CN.UTF-8
+env[40]	*env	0x7fffa503fd4a	140735961890122
+LESSOPEN=| /usr/bin/lesspipe %s
+env[41]	*env	0x7fffa503fd6a	140735961890154
+USER=lyy
+env[42]	*env	0x7fffa503fd73	140735961890163
+GNOME_TERMINAL_SERVICE=:1.95
+env[43]	*env	0x7fffa503fd90	140735961890192
+DISPLAY=:0
+env[44]	*env	0x7fffa503fd9b	140735961890203
+SHLVL=1
+env[45]	*env	0x7fffa503fda3	140735961890211
+LC_TELEPHONE=zh_CN.UTF-8
+env[46]	*env	0x7fffa503fdbc	140735961890236
+QT_IM_MODULE=ibus
+env[47]	*env	0x7fffa503fdce	140735961890254
+LC_MEASUREMENT=zh_CN.UTF-8
+env[48]	*env	0x7fffa503fde9	140735961890281
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=854ae56f732a8aa6c55336b460adfe75
+env[49]	*env	0x7fffa503fe41	140735961890369
+PAPERSIZE=a4
+env[50]	*env	0x7fffa503fe4e	140735961890382
+XDG_RUNTIME_DIR=/run/user/1000
+env[51]	*env	0x7fffa503fe6d	140735961890413
+LC_TIME=zh_CN.UTF-8
+env[52]	*env	0x7fffa503fe81	140735961890433
+JOURNAL_STREAM=8:47675
+env[53]	*env	0x7fffa503fe98	140735961890456
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+env[54]	*env	0x7fffa503feed	140735961890541
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+env[55]	*env	0x7fffa503ff55	140735961890645
+GDMSESSION=ubuntu
+env[56]	*env	0x7fffa503ff67	140735961890663
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=854ae56f732a8aa6c55336b460adfe75
+env[57]	*env	0x7fffa503ffc3	140735961890755
+LC_NUMERIC=zh_CN.UTF-8
+env[58]	*env	0x7fffa503ffda	140735961890778
+_=./LinkAddress
+big array	0x561c2a04b040	94678964023360
+huge array	0x561bea04b040	94677890281536
+local	0x7fffa503d2d0	140735961879248
+global	0x561bea04b02c	94677890281516
+argc	0x7fffa503d2cc	140735961879244
+argv	0x7fffa503d408	140735961879560
+argv[0]     7fffa503f2dc
+argv[1]     7fffa503f2ea
+argv[2]     7fffa503f2ed
+argv[3]     7fffa503f2f8
+argv[0]	0x7fffa503f2dc	140735961887452
+./LinkAddress
+argv[1]	0x7fffa503f2ea	140735961887466
+-u
+argv[2]	0x7fffa503f2ed	140735961887469
+1190200501
+argv[3]	0x7fffa503f2f8	140735961887480
+林燕燕
+p1	0x7f84ed04e010	140208888930320
+p2	0x561c2c5a76b0	94679003199152
+p3	0x7f84ed02d010	140208888795152
+p4	0x7f84ad02c010	140207815049232
+p5	0x7f842d02b010	140205667561488
+show_pointer	0x561bea048199	94677890269593
+useless	0x561bea0481d0	94677890269648
+main	0x561bea0481df	94677890269663
+exit	0x7f84fd098bc0	140209157671872
+printf	0x7f84fd0b3e10	140209157783056
+malloc	0x7f84fd0ec260	140209158013536
+free	0x7f84fd0ec850	140209158015056
