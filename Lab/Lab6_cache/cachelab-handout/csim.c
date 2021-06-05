@@ -56,13 +56,14 @@ void initCache()
 //todo...
     cache = malloc(S * sizeof(cache_set_t));
     for (int i = 0; i < S; i++){
-        cache[i] = malloc(E * sizeof(cache_set_t));
+        cache[i] = malloc(E * sizeof(cache_line_t));
         for (int j = 0; j < E; j++){
-            cache[i][j].valid = '0';
+            cache[i][j].valid = 0;
             cache[i][j].tag = 0;
             cache[i][j].lru = 0;
         }
     }
+    set_index_mask = (1 << s) - 1;
 }
 
 
@@ -88,7 +89,40 @@ void freeCache()
 void accessData(mem_addr_t addr)
 {
  //todo...
-    
+    mem_addr_t set = (addr >> b) & set_index_mask;
+    mem_addr_t tag = addr >> (b + s);
+    int find = 0;
+    for (int i = 0; i < E; i++) {
+        cache_line_t current = cache[set][i];
+        if (current.valid == 1 && current.tag == tag){
+            cache[set][i].lru = lru_counter;
+            hit_count++;
+            lru_counter++;
+            if (verbosity){
+                printf("hit ");
+            }
+            return;
+        }
+        else {
+            if (cache[set][find].lru > current.lru){
+                find = i;
+            }
+        }
+    }
+    if (verbosity){
+        printf("miss ");
+    }
+    miss_count++;
+    if (cache[set][find].valid == 1){
+        eviction_count++;
+        if (verbosity){
+            printf("eviction ");
+        }
+    }
+    cache[set][find].valid = 1;
+    cache[set][find].lru = lru_counter;
+    cache[set][find].tag = tag;
+    lru_counter++;
 }
 
 
@@ -115,11 +149,11 @@ void replayTrace(char* trace_fn)
                 printf("%c %llx,%u ", buf[1], addr, len);
 
             accessData(addr);
-
-            /* If the instruction is R/W then access again */
-            if(buf[1]=='M')
-                accessData(addr);
             
+            /* If the instruction is R/W then access again */
+            if(buf[1]=='M'){
+                accessData(addr);
+            }
             if (verbosity)
                 printf("\n");
         }
@@ -188,8 +222,9 @@ int main(int argc, char* argv[])
     }
 
     /* Compute S, E and B from command line args */
-    //...
- 
+    S = 1 << s;
+    B = 1 << b;
+    E = E;
     /* Initialize cache */
     initCache();
 
