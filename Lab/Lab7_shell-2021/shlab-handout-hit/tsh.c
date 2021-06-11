@@ -302,6 +302,20 @@ int parseline(const char *cmdline, char **argv)
  */
 int builtin_cmd(char **argv) 
 {
+	/*command is "quit" ,exit */
+	if (!strcmp(argv[0], "quit")){
+		exit(0);
+	}
+	/*command is "jobs" ,listjobs*/
+	else if (!strcmp(argv[0], "jobs")){
+		listjobs(jobs);
+		return 1;
+	}
+	/*command is "fg" or "bg", do_bgfg */
+	else if (!strcmp(argv[0], "bg") || !strcmp(argv[0], "fg")){
+		do_bgfg(argv);
+		return 1;
+	}
     return 0;     /* not a builtin command */
 }
 
@@ -367,6 +381,9 @@ void do_bgfg(char **argv)
  */
 void waitfg(pid_t pid)
 {
+	while (fgpid(jobs) == pid){
+		sleep(1);
+	}
     return;
 }
 
@@ -383,6 +400,28 @@ void waitfg(pid_t pid)
  */
 void sigchld_handler(int sig) 
 {
+	sigset_t mask, prev_mask;
+	int olderrno = errno;
+	int status;
+	pid_t pid;
+	sigfillset(&mask); 
+	while((pid = waitpid(-1, &status, WNOHANG | WUNTRACED)) > 0){
+        if (WIFEXITED(status)){
+            sigprocmask(SIG_BLOCK, &mask, &prev);   //block all signals
+			deletejob(jobs, pid);           //delete from joblist
+            sigprocmask(SIG_SETMASK, &prev, NULL);   //unbock  
+        }
+        else if (WIFSTOPPED(status)){
+            printf("Job [%d] (%d) stopped by signal %d\n", pid2jid(pid), pid, WSTOPSIG(status));
+        }
+        else if (WIFSIGNALED(status)){
+            printf("Job [%d] (%d) terminated by signal %d\n", pid2jid(pid), pid, WTERMSIG(status));
+            sigprocmask(SIG_BLOCK, &mask, &prev);    
+            deletejob(jobs, pid);   
+            sigprocmask(SIG_SETMASK, &prev, NULL);  
+        }
+    }
+    errno = olderrno;
     return;
 }
 
@@ -393,9 +432,18 @@ void sigchld_handler(int sig)
  */
 void sigint_handler(int sig) 
 {
+	int olderrno = errno;
+    pid_t pid = fgpid(jobs);
+	sigset_t mask, prev_mask;
+	sigfillset(&mask);
+	sigprocmask(SIG_BLOCK, &mask, &prev_mask);
+	sigprocmask(SIG_SETMASK, &prev_mask, NULL);
+    if(pid){
+        kill(-pid,SIGINT);  //sent SIGINT
+    }
+    errno = olderrno;
     return;
 }
-
 /*
  * sigtstp_handler - The kernel sends a SIGTSTP to the shell whenever
  *     the user types ctrl-z at the keyboard. Catch it and suspend the
@@ -403,6 +451,16 @@ void sigint_handler(int sig)
  */
 void sigtstp_handler(int sig) 
 {
+	int olderrno = errno;
+	pid_t pid = fgpid(jobs);
+	sigset_t mask, prev_mask;
+	sigfillset(&mask);
+	sigprocmask(SIG_BLOCK, &mask, &prev_mask); 
+	sigprocmask(SIG_SETMASK, &prev_mask, NULL);
+	if (pid){
+		kill(-pid, SIGINT); //sent SIGINT
+	}
+	errno = olderrno;
     return;
 }
 
